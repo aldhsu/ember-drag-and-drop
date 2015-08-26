@@ -1,7 +1,9 @@
 {{#each models as |model|}}
-  {{draggable-list-element
+  {{#draggable-list-element
   dragStartAction=(action "dragStartAction")
   dropAction=(action "dropAction")
-  model=model}}
+  model=model as |model|}}
+    {{model.value}}
+  {{/draggable-list-element}}
 {{/each}}
 
