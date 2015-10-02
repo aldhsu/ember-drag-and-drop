@@ -20,6 +20,7 @@ export default Ember.Component.extend({
     e.preventDefault();
   },
   drop(event) {
+    event.stopPropagation();
     this.attrs.dropAction(this.get("model"));
   },
 });
